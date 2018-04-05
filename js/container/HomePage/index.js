@@ -30,7 +30,7 @@ export default (MainScreenNavigator = TabNavigator(
               onPress={() => props.navigation.navigate("LucyChat")}
             >
               <Icon name="bowtie" />
-              <Text>Lucy</Text>
+              <Text>Check</Text>
             </Button>
             <Button
               vertical
@@ -38,7 +38,7 @@ export default (MainScreenNavigator = TabNavigator(
               onPress={() => props.navigation.navigate("JadeChat")}
             >
               <Icon name="briefcase" />
-              <Text>Nine</Text>
+              <Text>Done</Text>
             </Button>
             <Button
               vertical
@@ -46,7 +46,7 @@ export default (MainScreenNavigator = TabNavigator(
               onPress={() => props.navigation.navigate("NineChat")}
             >
               <Icon name="headset" />
-              <Text>Jade</Text>
+              <Text>Profile</Text>
             </Button>
           </FooterTab>
         </Footer>

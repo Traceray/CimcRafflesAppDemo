@@ -30,7 +30,7 @@ export default class JadeChat extends React.Component {
     return (
       <Container>
         <Header
-        style={{ backgroundColor: "#f44242" }}
+        style={{ backgroundColor: "#49afcd" }}
         >
           <Left>
             <Button
@@ -41,32 +41,40 @@ export default class JadeChat extends React.Component {
             </Button>
           </Left>
           <Body>
-            <Title>Nine Chat111</Title>
+            <Title>校验单</Title>
           </Body>
           <Right />
         </Header>
         <Content padder>
-          <Item floatingLabel style={{ marginTop: 20 }}>
-            <Label>Nine Chat</Label>
-            <Input />
-          </Item>
-          <Button
-            rounded
-            success
-            style={{ marginTop: 20, alignSelf: "center" }}
-            onPress={() => {
-              const navigationAction = NavigationActions.navigate({
-                routeName: "ProfileScreen", // <==== this is Profile tabNavigator
-                action: NavigationActions.navigate({
-                  routeName: "Profile", // <===== this is defaultScreen for Porfile
-                  params: { name: "JADE" }
-                })
-              });
-              this.props.navigation.dispatch(navigationAction);
-            }}
-          >
-            <Text>Goto Nine Profile</Text>
-          </Button>
+
+          <Card >
+              <CardItem header style={{height:35}}>
+                <Left >
+                  <Text style={{color:"#DA4F49",fontWeight:"600",fontSize:20,marginLeft:0}}>I-203-63</Text>
+                </Left>
+                <Right>
+                  <Button transparent textStyle={{color: '#eee'}} onPress={() => this.props.navigation.navigate("ConfirmFiled")}>
+                    <Icon name="eye" style={{fontSize:32,color:"#363636"}}/>
+                  </Button>
+                </Right>
+              </CardItem>
+              <CardItem>
+                <Body>
+                  <Text style={{color:"#000",fontSize:16,marginLeft:8}}>
+                    描述信息 尽快处理
+                  </Text>
+                </Body>
+              </CardItem>
+              <CardItem style={{height:30}}>
+                 <Right>
+                   <Button transparent textStyle={{color: '#eee'}}>
+                     <Icon name="person" style={{fontSize:16,color:"#000"}}/>
+                     <Text style={{color:"#999",fontSize:12,marginLeft:5}}>Trac</Text>
+                   </Button>
+                 </Right>
+               </CardItem>
+           </Card>
+
         </Content>
       </Container>
     );
